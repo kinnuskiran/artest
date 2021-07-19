@@ -16,12 +16,13 @@
       embedded
       arjs="sourceType: webcam; debugUIEnabled: true;"
     >
-      <a-text
-        value="Royal Cyber"
-        look-at="[gps-camera]"
-        scale="50 50 50"
-        gps-entity-place="latitude: <add-your-latitude>; longitude: <add-your-longitude>;"
-      ></a-text>
+      <a-assets>
+        <a-asset-item
+          id="cityModel"
+          src="https://cdn.aframe.io/test-models/models/glTF-2.0/virtualcity/VC.gltf"
+        ></a-asset-item>
+      </a-assets>
+      <a-entity gltf-model="#cityModel" modify-materials></a-entity>
       <a-camera gps-camera rotation-reader> </a-camera>
     </a-scene>
   </body>
